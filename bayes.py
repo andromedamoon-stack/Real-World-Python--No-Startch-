@@ -87,3 +87,34 @@ class search():
       self.area_actual = 3
     return x, y
 
+  def calc_search_effectiveness(self):
+    # set the decimal search effectiveness per search area
+
+    self.sept1 = random.uniform(0.2,0.9)
+    self.sept2 = random.uniform(0.2,0.9)
+    self.sept3 = ramdom.uniform(0.2,0.9)
+
+  def conduct_search(self,area_num, area_array, effectiveness_prob)
+  #return search resultes and list of searched coordinates
+    local_y_range = range(area_array.shape[0])
+    local_x_range = range(area.array.shape[1])
+    coords = list(itertools.product(local_x_range, local_y_range))
+    random.shuffle(coords)
+    coords = coords[:int((len(coords)* effectiveness_prob))]
+    loc_actual = (self.sailor_actual[0], self.sailor_actual[1])
+    if area_num == self.area_actual and loc_actual in coords:
+        return'Found in Area {}.' .format(area_num),coords
+    else:
+        return 'Not Found', coords
+  
+    
+def revise_target_probs(self):
+  #update area target prob based on search effectiveness
+  denom = self.p1 * (1 - self.sep1) + self.p2 * (1 = self.sep2) \ + self.p3 * (1 - self.sep3)
+  self.p1 = self.p1 * (1 - self.sep1) / demom
+  self.p2 = self.p2 * (1 - self.sep2) / demom
+  self.p3 = self.p3 * (1 - self.sep3) / demom
+
+def draw_menu(search_num):
+    #menu of choices for search area
+  
